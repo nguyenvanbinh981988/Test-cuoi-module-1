@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function isFibonacci(x){
+        let a = 0
+        let b = 1
+        let temp = 0
+        let check = false
+        let i = x+a
+        while (temp < i){
+            temp = a + b
+            a = b
+            b = temp
+            if (temp === x){
+                check = true
+                break;
+            }
+        }
+        if (check){
+            console.log(x + ' thuoc day Fibonacci')
+        } else {
+            console.log(x + ' khong thuoc day Fibonacci')
+        }
+    }
+
+    let x = parseInt(prompt('nhap so can check'))
+    isFibonacci(x)
+
+</script>
